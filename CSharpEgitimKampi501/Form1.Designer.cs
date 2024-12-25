@@ -29,21 +29,33 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtProductId = new System.Windows.Forms.TextBox();
             this.btnList = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtProductPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtProductStock = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtCategory = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblTotalBookCount = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblMaxPriceBookName = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblCategoryCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -55,13 +67,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ürün Id :";
             // 
-            // textBox1
+            // txtProductId
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtProductId.Location = new System.Drawing.Point(103, 34);
+            this.txtProductId.Name = "txtProductId";
+            this.txtProductId.Size = new System.Drawing.Size(218, 22);
+            this.txtProductId.TabIndex = 1;
+            this.txtProductId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnList
             // 
@@ -73,6 +85,7 @@
             this.btnList.TabIndex = 2;
             this.btnList.Text = "Listele";
             this.btnList.UseVisualStyleBackColor = false;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // dataGridView1
             // 
@@ -85,12 +98,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(1013, 406);
             this.dataGridView1.TabIndex = 3;
             // 
-            // textBox2
+            // txtProductName
             // 
-            this.textBox2.Location = new System.Drawing.Point(103, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(218, 22);
-            this.textBox2.TabIndex = 5;
+            this.txtProductName.Location = new System.Drawing.Point(103, 62);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(218, 22);
+            this.txtProductName.TabIndex = 5;
             // 
             // label2
             // 
@@ -101,12 +114,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Ürün Adı :";
             // 
-            // textBox3
+            // txtProductPrice
             // 
-            this.textBox3.Location = new System.Drawing.Point(103, 92);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(218, 22);
-            this.textBox3.TabIndex = 7;
+            this.txtProductPrice.Location = new System.Drawing.Point(103, 92);
+            this.txtProductPrice.Name = "txtProductPrice";
+            this.txtProductPrice.Size = new System.Drawing.Size(218, 22);
+            this.txtProductPrice.TabIndex = 7;
             // 
             // label3
             // 
@@ -117,12 +130,12 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Ürün Fiyat :";
             // 
-            // textBox4
+            // txtProductStock
             // 
-            this.textBox4.Location = new System.Drawing.Point(103, 120);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(218, 22);
-            this.textBox4.TabIndex = 9;
+            this.txtProductStock.Location = new System.Drawing.Point(103, 120);
+            this.txtProductStock.Name = "txtProductStock";
+            this.txtProductStock.Size = new System.Drawing.Size(218, 22);
+            this.txtProductStock.TabIndex = 9;
             // 
             // label4
             // 
@@ -133,12 +146,12 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Ürün Stok :";
             // 
-            // textBox5
+            // txtCategory
             // 
-            this.textBox5.Location = new System.Drawing.Point(103, 148);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(218, 22);
-            this.textBox5.TabIndex = 11;
+            this.txtCategory.Location = new System.Drawing.Point(103, 148);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(218, 22);
+            this.txtCategory.TabIndex = 11;
             // 
             // label5
             // 
@@ -159,6 +172,7 @@
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Ekle";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -170,6 +184,7 @@
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -182,31 +197,129 @@
             this.btnUpdate.TabIndex = 14;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(132)))), ((int)(((byte)(241)))));
+            this.panel1.Controls.Add(this.lblTotalBookCount);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Location = new System.Drawing.Point(27, 522);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(294, 112);
+            this.panel1.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(3, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(285, 32);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Toplam Kitap Sayısı";
+            // 
+            // lblTotalBookCount
+            // 
+            this.lblTotalBookCount.AutoSize = true;
+            this.lblTotalBookCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTotalBookCount.Location = new System.Drawing.Point(117, 69);
+            this.lblTotalBookCount.Name = "lblTotalBookCount";
+            this.lblTotalBookCount.Size = new System.Drawing.Size(0, 28);
+            this.lblTotalBookCount.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.panel2.Controls.Add(this.lblMaxPriceBookName);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Location = new System.Drawing.Point(327, 522);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(294, 112);
+            this.panel2.TabIndex = 17;
+            // 
+            // lblMaxPriceBookName
+            // 
+            this.lblMaxPriceBookName.AutoSize = true;
+            this.lblMaxPriceBookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMaxPriceBookName.Location = new System.Drawing.Point(117, 69);
+            this.lblMaxPriceBookName.Name = "lblMaxPriceBookName";
+            this.lblMaxPriceBookName.Size = new System.Drawing.Size(0, 28);
+            this.lblMaxPriceBookName.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(38, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(225, 32);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "En Pahalı Kitap";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.panel3.Controls.Add(this.lblCategoryCount);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Location = new System.Drawing.Point(627, 522);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(294, 112);
+            this.panel3.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(21, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(244, 32);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Kaç Kategori Var";
+            // 
+            // lblCategoryCount
+            // 
+            this.lblCategoryCount.AutoSize = true;
+            this.lblCategoryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCategoryCount.Location = new System.Drawing.Point(102, 74);
+            this.lblCategoryCount.Name = "lblCategoryCount";
+            this.lblCategoryCount.Size = new System.Drawing.Size(0, 20);
+            this.lblCategoryCount.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1388, 458);
+            this.ClientSize = new System.Drawing.Size(1388, 719);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtProductStock);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtProductPrice);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnList);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtProductId);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,20 +328,29 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProductId;
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtProductPrice;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtProductStock;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTotalBookCount;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblMaxPriceBookName;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblCategoryCount;
     }
 }
 
